@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/azekla/booking/pkg/config"
-	"github.com/azekla/booking/pkg/handlers"
-	"github.com/azekla/booking/pkg/render"
+	"github.com/azekla/booking/internal/config"
+	"github.com/azekla/booking/internal/handlers"
+	"github.com/azekla/booking/internal/render"
 	"log"
 	"net/http"
 	"time"
@@ -21,7 +21,7 @@ var session *scs.SessionManager
 func main() {
 	// change this to true when in production
 	app.InProduction = false
- 	// create a new session manager
+	// create a new session manager
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
 	session.Cookie.Persist = true
