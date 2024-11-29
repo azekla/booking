@@ -11,7 +11,8 @@ import (
 	"time"
 )
 
-// set the port number for the server
+// port number
+
 const portNumber = ":7182"
 
 var app config.AppConfig
